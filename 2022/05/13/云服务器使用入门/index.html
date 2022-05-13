@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git基本使用, Luckycc Blog">
-    <meta name="description" content="Git基本使用#Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。 也是[Linus Torvalds](https://baike.baidu.com/item/Linus Torvalds/9336">
+    <meta name="keywords" content="云服务器使用入门, Luckycc Blog">
+    <meta name="description" content="Ubuntu系统初始化先购买云服务器，然后选择ubuntu的系统镜像初始化服务器。
+打开远程连接，使用命令行更新系统。apt 是ubuntu系统的包管理软件。
+123456sudo apt update # 更新系统软件包信息sudo ap">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +21,7 @@
 
     
 
-    <title>Git基本使用 | Luckycc Blog</title>
+    <title>云服务器使用入门 | Luckycc Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git基本使用</h1>
+                    <h1 class="description center-align post-title">云服务器使用入门</h1>
                 </div>
             </div>
         </div>
@@ -430,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                                <span class="chip bg-color">Git基本使用</span>
+                            <a href="/tags/Ubuntu/">
+                                <span class="chip bg-color">Ubuntu</span>
                             </a>
                         
                     </div>
@@ -467,46 +469,36 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Git基本使用"><a href="#Git基本使用" class="headerlink" title="Git基本使用"></a>Git基本使用</h2><p>#Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。 也是[Linus Torvalds](<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Linus">https://baike.baidu.com/item/Linus</a> Torvalds/9336769)为了帮助管理Linux内核开发而开发的一个开放源码的版本控制软件。</p>
-<p><strong>1.创建git数据仓库</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">、、、powershell</span><br><span class="line"></span><br><span class="line">\&gt;git init</span><br><span class="line"></span><br><span class="line">、、、</span><br></pre></td></tr></table></figure>
+                <h2 id="Ubuntu系统初始化"><a href="#Ubuntu系统初始化" class="headerlink" title="Ubuntu系统初始化"></a>Ubuntu系统初始化</h2><p>先购买云服务器，然后选择ubuntu的系统镜像初始化服务器。</p>
+<p>打开远程连接，使用命令行更新系统。apt 是ubuntu系统的包管理软件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update <span class="comment"># 更新系统软件包信息</span></span><br><span class="line">sudo apt upgrade <span class="comment"># 更新系统软件</span></span><br><span class="line"></span><br><span class="line">sudo apt-cache search mysql <span class="comment"># 查询软件包信息</span></span><br><span class="line">sudo apt install mysql <span class="comment"># 安装软件包</span></span><br><span class="line">sudo apt remove mysql <span class="comment"># 移除软件包</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>2.查看当前仓库的状态</strong></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">、、、powershell</span><br><span class="line"></span><br><span class="line">\&gt;git status</span><br><span class="line"></span><br><span class="line">、、、</span><br></pre></td></tr></table></figure>
+<h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>为linux系统用户设置系统密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd</span><br></pre></td></tr></table></figure>
 
-<ol>
-<li>未被管理的状态U</li>
-<li>新增加状态，表示已经加入本地暂存区。 A</li>
-<li>已经被管理，但在工作区被修改的文件。 M</li>
-<li>已经被形成版本状态。</li>
-</ol>
-<p><strong>3.添加文件命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\```powershell</span><br><span class="line"></span><br><span class="line">\&gt;git add ./xx</span><br><span class="line"></span><br><span class="line">\```</span><br><span class="line">git add ./*所有文件</span><br><span class="line">/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
+<p>添加新用户</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser [用户名]</span><br></pre></td></tr></table></figure>
 
-<p>4.提交文件到仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">​```powershell</span><br><span class="line"></span><br><span class="line">\&gt;git commit -m ”message”</span><br><span class="line"></span><br><span class="line">\```</span><br></pre></td></tr></table></figure>
+<p>将新用户加入到sudo中。编辑 /etc/sudoers 这个文件。</p>
+<h2 id="安装-MySQL"><a href="#安装-MySQL" class="headerlink" title="安装 MySQL"></a>安装 MySQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y mysql-server</span><br><span class="line"><span class="comment"># 使用 root 登录mysql，可以不用密码。</span></span><br><span class="line">sudo mysql</span><br><span class="line"><span class="comment"># 手动修改密码</span></span><br><span class="line">mysql&gt; alter user <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified with mysql_native_password by <span class="string">&#x27;123456&#x27;</span>;</span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line"><span class="comment"># 使用新密码登录数据库</span></span><br><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开放远程访问</span></span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; update user <span class="built_in">set</span> Host=@<span class="string">&#x27;%&#x27;</span> <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span> and host=<span class="string">&#x27;localhost&#x27;</span> LIMIT 1;</span><br><span class="line">mysql&gt; flush privileges;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改 /etc/mysql/mysql.conf.d/mysqld.cnf</span></span><br><span class="line"><span class="comment"># 将 bind-address=127.0.0.1 注释</span></span><br><span class="line"><span class="comment"># 开放linux系统3306端口的访问</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>5.删除文件</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">​```powershell</span><br><span class="line"></span><br><span class="line">\&gt;git rm 文件名</span><br><span class="line"></span><br><span class="line">\```</span><br></pre></td></tr></table></figure>
+<h3 id="安装postgresql"><a href="#安装postgresql" class="headerlink" title="安装postgresql"></a>安装postgresql</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install postgresql -y</span><br><span class="line"><span class="comment"># 删除 postgres 用户密码</span></span><br><span class="line">sudo passwd -d postgres</span><br><span class="line"><span class="comment"># 重新设置 postgres 用户密码</span></span><br><span class="line">sudo -u postgres passwd</span><br><span class="line"><span class="comment"># 进入数据库设置用户 postgres 密码</span></span><br><span class="line">sudo -u postgres psql</span><br><span class="line"></span><br><span class="line">psql (12.9 (Ubuntu 12.9-0ubuntu0.20.04.1))</span><br><span class="line">Type <span class="string">&quot;help&quot;</span> <span class="keyword">for</span> <span class="built_in">help</span>.</span><br><span class="line"></span><br><span class="line">postgres=<span class="comment"># alter user postgres with password &#x27;sql2019&#x27;; -- 修改用户密码，要和之前的系统密码一致</span></span><br><span class="line">postgres=<span class="comment"># create user zengsun with superuser createdb createrole; -- 添加用户 zengsun</span></span><br><span class="line">postgres=<span class="comment"># alter user zengsun with password &#x27;sql2019&#x27;; -- 设置密码</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="file:///C:\Users\Acer\AppData\Local\Temp\ksohtml\wps2D0E.tmp.jpg" alt="img"> </p>
-<p><strong>6.回退版本号</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">​```powershell</span><br><span class="line"></span><br><span class="line">\&gt;git reset --hard 版本号</span><br><span class="line"></span><br><span class="line">\```</span><br><span class="line"></span><br><span class="line">git log查看版本</span><br></pre></td></tr></table></figure>
+<h2 id="安装redis"><a href="#安装redis" class="headerlink" title="安装redis"></a>安装redis</h2><h2 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h2><p>由于ubuntu 20.04提供的nodejs版本比较老，所以一般情况，我们要选择新的源来进行安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 nodejs 官方源</span></span><br><span class="line">curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 nodejs 软件包</span></span><br><span class="line">sudo apt install nodejs</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看 nodejs 版本</span></span><br><span class="line">node --version</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置 npm 源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 
-<p><strong>7.分支管理</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">​```powershell</span><br><span class="line"></span><br><span class="line">\&gt;git branch # 查看分支</span><br><span class="line"></span><br><span class="line">\&gt;git branch new # 创建名称为new新分支</span><br><span class="line"></span><br><span class="line">\&gt;git checkout new # 切换分支</span><br><span class="line"></span><br><span class="line">\&gt;git branch -d new # 删除分支</span><br><span class="line"></span><br><span class="line">\&gt;git merge [分支名] # 合并分支</span><br><span class="line"></span><br><span class="line">\```</span><br></pre></td></tr></table></figure>
+<h2 id="将项目部署到服务器端"><a href="#将项目部署到服务器端" class="headerlink" title="将项目部署到服务器端"></a>将项目部署到服务器端</h2><p>你可以使用文件上传的方式来部署项目，但是这通常不如使用git来更新和管理来的方便。比如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://gitee.com/zengsun/todo.git -b mysql</span><br></pre></td></tr></table></figure>
 
-<p><strong>8.全局设置</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">​```sh</span><br><span class="line"></span><br><span class="line">git config --global user.email [“1234578@qq.com”](mailto:\“1234578@qq.com\”)</span><br><span class="line"></span><br><span class="line">git config -- global user.name “zcc”</span><br><span class="line"></span><br><span class="line">\```</span><br></pre></td></tr></table></figure>
+<h2 id="安装-pm2-进程管理工具"><a href="#安装-pm2-进程管理工具" class="headerlink" title="安装 pm2 进程管理工具"></a>安装 pm2 进程管理工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装 pm2</span></span><br><span class="line">sudo npm i pm2 -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行项目</span></span><br><span class="line"><span class="built_in">cd</span> /home/zengyq/todo</span><br><span class="line">sudo pm2 start src/index.js</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果发现权限不足，则使用如下命令：</span></span><br><span class="line">sudo pm2 startup</span><br><span class="line">sudo pm2 save</span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line">$ sudo pm2 list    查看启动状况</span><br><span class="line">$ sudo pm2 restart 重启项目</span><br><span class="line">$ pm2 stop    关闭</span><br></pre></td></tr></table></figure>
 
-<p><strong>9.vscode中集成git使用</strong></p>
-<p>在vscode中已经集成基本的git图像操作功能。但还有功能更强大的插件可以使用；gitlens是非常流行的git图像增强操作插件</p>
-<p><strong>10.提交文件到远程仓库</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">创建远程仓库</span><br><span class="line"></span><br><span class="line">git remote add origin https;//gitee.com/zcczuika/luckyDog.git(仓库地址)</span><br></pre></td></tr></table></figure>
+<h2 id="安裝-nginx-服务器"><a href="#安裝-nginx-服务器" class="headerlink" title="安裝 nginx 服务器"></a>安裝 nginx 服务器</h2><p>nginx是一个http服务器，同时也是一个高性能的反向代理服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install nginx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入nginx配置目录</span></span><br><span class="line"><span class="built_in">cd</span> /etc/nginx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编写配置文件</span></span><br><span class="line">sudo vim nginx.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据主配置可知，真实的虚拟服务器配置在 site-available/default。</span></span><br><span class="line">sudo vim site-available/default</span><br></pre></td></tr></table></figure>
 
-<p><strong>11.更新笔记上传git流程</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">=&gt;git add ./xx</span><br><span class="line"></span><br><span class="line">=&gt;git commit -m “message”</span><br><span class="line"></span><br><span class="line">=&gt;git push origin master</span><br></pre></td></tr></table></figure>
+<p>default文件内容如下：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 虚拟服务配置</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">  <span class="attribute">listen</span> <span class="number">80</span> default_server;</span><br><span class="line">  <span class="attribute">listen</span> [::]:<span class="number">80</span> default_server;</span><br><span class="line"></span><br><span class="line">  <span class="comment"># SSL configuration</span></span><br><span class="line">  <span class="attribute">listen</span> <span class="number">443</span> ssl default_server;</span><br><span class="line">  <span class="attribute">listen</span> [::]:<span class="number">443</span> ssl default_server;</span><br><span class="line">  </span><br><span class="line">  <span class="attribute">ssl_session_timeout</span> <span class="number">5m</span>;</span><br><span class="line">  <span class="attribute">ssl_ciphers</span> ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;</span><br><span class="line">  <span class="attribute">ssl_certificate</span> /etc/nginx/pengyucc.com_nginx/pengyucc.com_bundle.pem;</span><br><span class="line">  <span class="attribute">ssl_certificate_key</span> /etc/nginx/pengyucc.com_nginx/pengyucc.com.key;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># cors configuration</span></span><br><span class="line">  <span class="comment"># set $cors_origin &quot;&quot;;</span></span><br><span class="line">  <span class="comment"># if ($http_origin ~* &quot;^http://api.xx.com$&quot;)&#123;</span></span><br><span class="line">  <span class="comment">#   set $cors_origin $http_origin;</span></span><br><span class="line">  <span class="comment"># &#125;</span></span><br><span class="line">  </span><br><span class="line">  <span class="attribute">set</span> <span class="variable">$cors_origin</span> <span class="variable">$http_origin</span>;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">add_header</span> Access-Control-Allow-Origin <span class="variable">$cors_origin</span> always; </span><br><span class="line">  <span class="attribute">add_header</span> Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS always;</span><br><span class="line">  <span class="attribute">add_header</span> Access-Control-Allow-Credentials <span class="literal">true</span> always;</span><br><span class="line">  <span class="attribute">add_header</span> Access-Control-Allow-Headers DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,x-auth-token always;</span><br><span class="line">  <span class="attribute">add_header</span> Access-Control-Max-Age <span class="number">1728000</span> always;</span><br><span class="line"></span><br><span class="line">  <span class="comment"># 预检请求处理</span></span><br><span class="line">  <span class="attribute">if</span> (<span class="variable">$request_method</span> = OPTIONS) &#123;</span><br><span class="line">    <span class="attribute">return</span> <span class="number">204</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># Add index.php to the list if you are using PHP</span></span><br><span class="line">  <span class="attribute">index</span> index.html index.htm index.nginx-debian.html;</span><br><span class="line"></span><br><span class="line">  <span class="attribute">server_name</span> _;</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># proxy configuration</span></span><br><span class="line">  <span class="section">location</span> / &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://localhost:5000;</span><br><span class="line">    <span class="attribute">include</span> /etc/nginx/proxy_params;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><a target="_blank" rel="noopener" href="https://www.wolai.com/7mJZRE5FUXatbhVXK24Bfr">Vim编辑器使用入门</a></p>
 
                 
             </div>
@@ -533,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://luckycc0312.github.io/2022/05/13/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">https://luckycc0312.github.io/2022/05/13/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</a>
+                    <a href="https://luckycc0312.github.io/2022/05/13/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">https://luckycc0312.github.io/2022/05/13/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,8 +563,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                                    <span class="chip bg-color">Git基本使用</span>
+                                <a href="/tags/Ubuntu/">
+                                    <span class="chip bg-color">Ubuntu</span>
                                 </a>
                             
                         </div>
@@ -746,62 +738,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/05/13/Windows%E5%AE%89%E8%A3%85MySQL/">
+                <a href="/2022/05/13/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Windows安装MySQL">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="云服务器使用入门">
                         
-                        <span class="card-title">Windows安装MySQL</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            luckycc
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Mysql/">
-                        <span class="chip bg-color">Mysql</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2022/05/13/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Git基本使用">
-                        
-                        <span class="card-title">Git基本使用</span>
+                        <span class="card-title">云服务器使用入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,8 +774,53 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
-                        <span class="chip bg-color">Git基本使用</span>
+                    <a href="/tags/Ubuntu/">
+                        <span class="chip bg-color">Ubuntu</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/13/Windows%E5%AE%89%E8%A3%85MySQL/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Windows安装MySQL">
+                        
+                        <span class="card-title">Windows安装MySQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            luckycc
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Mysql/">
+                        <span class="chip bg-color">Mysql</span>
                     </a>
                     
                 </div>
